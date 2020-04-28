@@ -1,39 +1,44 @@
 <template>
-    <Page>
-    <ActionBar title="인증 화면" />
+  <Page>
     <StackLayout>
+      <NavigationButton
+        text="Go back"
+        android.systemIcon="ic_menu_back"
+        @tap="$goto('main',navOptions)"
+      />
       <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
-
         <TabViewItem title="Personal ID" iconSource="~/images/icon.png">
-            <Button text="개인정보 입력" />
+          <Button text="ID : 개인정보 입력" />
         </TabViewItem>
 
         <TabViewItem title="여권정보" iconSource="~/images/icon.png">
-           <Button text="개인정보 입력" />
+          <Button text="여권 : 개인정보 입력" />
         </TabViewItem>
 
-          <TabViewItem title="학생증" iconSource="~/images/icon.png">
-            <Button text="개인정보 입력" />
+        <TabViewItem title="학생증" iconSource="~/images/icon.png">
+          <Button text="학생증 : 개인정보 입력" />
         </TabViewItem>
-
-</TabView>
+      </TabView>
     </StackLayout>
-    </Page>
+  </Page>
 </template>
 
 <script>
-    export default {
-        methods: {
-            onButtonTap() {
-                this.$navigateBack();
-            },
-            
-        
-            getPassword(){
-                this.$navigateBack();
-            }
+export default {
+  computed: {
+    navOptions() {
+      return {
+        clearHistory: true,
+        backstackVisible: true,
+        transition: {
+          name: "fade",
+          duration: 380,
+          curve: "easeIn"
         }
-    };
+      };
+    }
+  }
+};
 </script>
 
 <style>

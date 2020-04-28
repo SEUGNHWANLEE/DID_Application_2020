@@ -11,7 +11,7 @@
           <StackLayout width="300">
             <template v-if="count === 0">
               <FlexboxLayout flexDirection="column">
-                <label name="num" :text="items[0].no" />
+                <Label name="num" :text="items[0].no" />
                 <Label name="desc" :text="items[0].desc" />
               </FlexboxLayout>
             </template>
@@ -35,10 +35,10 @@
       </FlexboxLayout>
 
       <FlexboxLayout flexDirection="column">
-        <Button text="시작하기" @tap="getStartApp" />
+        <Button text="시작하기" @tap="$goto('password',navOptions)"></Button>
         <FlexboxLayout>
-          <Button text="약관 및 동의" @tap="getInfo" />
-          <Button text="복구하기" @tap="getRestore" />
+          <Button text="약관 및 동의" @tap="getInfo"></Button>
+          <Button text="복구하기" @tap="getRestore"></Button>
         </FlexboxLayout>
       </FlexboxLayout>
     </FlexboxLayout>
@@ -81,7 +81,6 @@ export default {
     },
     getStartApp() {
       console.log("get start app");
-      Vue.prototype.$goto('password');
     },
     getInfo() {
       console.log("get information");

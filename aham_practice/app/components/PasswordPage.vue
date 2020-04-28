@@ -1,14 +1,12 @@
 <template>
   <Page>
-    <StackLayout>
-      <ActionBar title="핀 비밀번호 설정" />
+    <StackLayout width="*" height="*" backgroundColor="White">
       <StackLayout>
-        <Label text="Logo is here ! " />
-        <TextField secure="false" hint="password" />
-        <Label text="핀 번호 입력" fontWeight="Bold" />
+        <TextField hint="password" width="*" height="50" ></TextField>
+        <Label text="핀 번호 입력" fontWeight="Bold"></Label>
         <FlexboxLayout flexDirection="row">
-          <Button text="뒤로가기" @tap="$goto('password',navOptions)" />
-          <Button text="6자리 입력" @tap="$goto('identify',navOptions)" />
+          <Button text="뒤로가기" @tap="$goto('password',navOptions)"></Button>
+          <Button text="6자리 입력" @tap="$goto('identify',navOptions)"></Button>
         </FlexboxLayout>
       </StackLayout>
     </StackLayout>
@@ -44,5 +42,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+StackLayout {
+    align-items:center;
+}
 </style>
