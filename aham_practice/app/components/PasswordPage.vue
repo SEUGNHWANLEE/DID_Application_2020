@@ -1,15 +1,17 @@
 <template>
   <Page>
-    <StackLayout width="*" height="*" backgroundColor="White">
-      <StackLayout>
-        <TextField hint="password" width="*" height="50" ></TextField>
-        <Label text="핀 번호 입력" fontWeight="Bold"></Label>
+    <FlexboxLayout width="*" height="*" backgroundColor="White">
+      <FlexboxLayout flexDirection="column">
+          <FlexboxLayout flexDirection="column">
+          <Label text="핀 번호 입력" fontWeight="Bold" id="title"></Label>
+        <TextField id="pin" hint="password" width="*" height="50" ></TextField>
+          </FlexboxLayout>
         <FlexboxLayout flexDirection="row">
-          <Button text="뒤로가기" @tap="$goto('password',navOptions)"></Button>
+          <Button text="뒤로가기" @tap="$goto('main',navOptions)"></Button>
           <Button text="6자리 입력" @tap="$goto('identify',navOptions)"></Button>
         </FlexboxLayout>
-      </StackLayout>
-    </StackLayout>
+      </FlexboxLayout>
+    </FlexboxLayout>
   </Page>
 </template>
 
@@ -43,7 +45,14 @@ export default {
 </script>
 
 <style scoped>
-StackLayout {
-    align-items:center;
-}
+    FlexboxLayout {
+        justify-content: center;
+        align-items: center;
+    }
+    #title {
+        font-size:30;
+    }
+    #pin {
+        font-size:20;
+    }
 </style>

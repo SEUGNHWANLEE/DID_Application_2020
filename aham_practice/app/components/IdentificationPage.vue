@@ -1,11 +1,13 @@
 <template>
   <Page>
+      <ActionBar title="Service" height="30" backgroundColor="#6EC8FF">
+        <NavigationButton
+          text="Go back"
+          android.systemIcon="ic_menu_back"
+          @tap="$goto('main',navOptions)"
+        />
+      </ActionBar>
     <StackLayout>
-      <NavigationButton
-        text="Go back"
-        android.systemIcon="ic_menu_back"
-        @tap="$goto('main',navOptions)"
-      />
       <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
         <TabViewItem title="Personal ID" iconSource="~/images/icon.png">
           <Button text="ID : 개인정보 입력" />
