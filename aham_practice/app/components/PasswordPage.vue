@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import PasswordPages from './PasswordPages.vue'
-import IdentificationPage from './IdentificationPage.vue'
+import PasswordPages from './PasswordPages'
+import IdentificationPage from './IdentificationPage'
     export default {
         methods: {
             onBackButton() {
