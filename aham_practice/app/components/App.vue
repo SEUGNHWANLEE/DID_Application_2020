@@ -16,7 +16,6 @@
                         </FlexboxLayout>
                     </v-template>
                 </ListView>
-
                 <Label textWrap="true" :text="this.textFieldValue"
                     class="h2 description-label" />
                 <TextField v-model="textFieldValue" hint="Enter text..." />

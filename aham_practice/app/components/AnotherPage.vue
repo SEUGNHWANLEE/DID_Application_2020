@@ -18,7 +18,6 @@ import PasswordPage from './PasswordPage'
     export default {
         methods: {
             onButtonGo() {
-                this.textFieldValue = "Button was pressed !";
                 this.$navigateTo(PasswordPage);
             },
             onButtonTap() {
