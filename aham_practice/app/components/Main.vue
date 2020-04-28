@@ -28,10 +28,9 @@
               </FlexboxLayout>
             </template>
             <template v-else>
-                <Label name="desc" text=""/>
+              <Label name="desc" text />
             </template>
           </StackLayout>
-
         </DockLayout>
       </FlexboxLayout>
 
@@ -47,7 +46,6 @@
 </template>
 
 <script>
-import AnotherPage from './AnotherPage'
 export default {
   data() {
     return {
@@ -71,25 +69,38 @@ export default {
   methods: {
     getPrevPage() {
       console.log("get to prev page" + this.count);
-      if(this.count > 0) {
+      if (this.count > 0) {
         this.count--;
       }
     },
     getNextPage() {
       console.log("get to next page" + this.count);
-      if(this.count < 2) {
+      if (this.count < 2) {
         this.count++;
       }
     },
     getStartApp() {
       console.log("get start app");
-      this.$navigateTo(AnotherPage);
+      Vue.prototype.$goto('password');
     },
     getInfo() {
       console.log("get information");
     },
     getRestore() {
       console.log("will restore information");
+    }
+  },
+  computed: {
+    navOptions() {
+      return {
+        clearHistory: true,
+        backstackVisible: true,
+        transition: {
+          name: "fade",
+          duration: 380,
+          curve: "easeIn"
+        }
+      };
     }
   }
 };
