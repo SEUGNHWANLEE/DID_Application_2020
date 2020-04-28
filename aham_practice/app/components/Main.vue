@@ -27,11 +27,15 @@
 </template>
 
 <script>
+import AnotherPage from './AnotherPage'
+
 export default {
+    
     methods : {
         getStartApp() {
-            console.log("get start app");
-        },
+                this.textFieldValue = "Button was pressed !";
+                this.$navigateTo(AnotherPage);
+            },
         getInfo() {
             console.log("get information");
         },
