@@ -35,7 +35,7 @@
       </FlexboxLayout>
 
       <FlexboxLayout flexDirection="column">
-        <Button text="시작하기" @tap="$goto('password',navOptions)"></Button>
+        <Button text="시작하기ㅋ" @tap="$goto('password',navOptions)"></Button>
         <FlexboxLayout>
           <Button text="약관 및 동의" @tap="getInfo"></Button>
           <Button text="복구하기" @tap="getRestore"></Button>

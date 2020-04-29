@@ -1,13 +1,10 @@
 <template>
   <Page>
     <ActionBar title="Another" />
-    <StackLayout>
-      <Label text="Here is another page !" />
       <StackLayout orientation="horizontal">
         <Button text="뒤로가기" backgroundColor="#43b883" color="white" @tap="onButtonTap" />
         <Button @tap="onButtonGo" text="계속하기" backgroundColor="#43b883" color="white" />
       </StackLayout>
-    </StackLayout>
   </Page>
 </template>
 
