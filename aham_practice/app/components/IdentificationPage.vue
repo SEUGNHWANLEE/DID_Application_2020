@@ -1,7 +1,6 @@
 <template>
   <Page>
     <ActionBar title="Service" height="30" backgroundColor="#6EC8FF">
-<<<<<<< HEAD
       <ActionItem
         @tap="$goto('main',navOptions)"
         text="<"
@@ -9,13 +8,7 @@
         android.systemIcon="ic_menu_back"
       />
     </ActionBar>
-=======
-       <NavigationButton text="뒤로가자!" 
-       android.systemIcon="ic_menu_back"
-       @tap="$goto('main',navOptions)" />
-    </ActionBar>
-
->>>>>>> 04c52e1a6df048c60c90ddec94a43dea8b272542
+     
     <StackLayout>
       <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
         <TabViewItem title="Personal ID">
