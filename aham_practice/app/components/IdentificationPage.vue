@@ -1,9 +1,8 @@
 <template>
   <Page>
-    <ActionBar title="Service" height="30" backgroundColor="#6EC8FF">
-      <ActionItem
+    <ActionBar title="Service">
+      <ActionItem text="Go Back"
         @tap="$goto('main',navOptions)"
-        text="<"
         ios.position="left"
         android.systemIcon="ic_menu_back"
       />

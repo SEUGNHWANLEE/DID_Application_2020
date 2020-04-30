@@ -1,5 +1,7 @@
 <template>
-  <Page>
+  <Page :actionBarHidden="checkCnt">
+    <ActionBar title="AHAM">
+    </ActionBar>
     <FlexboxLayout flexDirection="column">
       <Label text="AHAM LOGO will be here" />
 
@@ -49,6 +51,7 @@
 export default {
   data() {
     return {
+      checkCnt: true,
       count: 0,
       items: [
         {
@@ -71,12 +74,24 @@ export default {
       console.log("get to prev page" + this.count);
       if (this.count > 0) {
         this.count--;
+        if(this.count == 1 || this.count == 2) {
+          this.checkCnt = false;
+        }
+        else {
+          this.checkCnt = true;
+        }
       }
     },
     getNextPage() {
       console.log("get to next page" + this.count);
       if (this.count < 2) {
         this.count++;
+        if(this.count == 1 || this.count == 2) {
+          this.checkCnt = false;
+        }
+        else {
+          this. checkCnt = true;
+        }
       }
     },
     getStartApp() {

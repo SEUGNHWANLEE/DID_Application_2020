@@ -1,5 +1,7 @@
 <template>
   <Page>
+    <ActionBar title="AHAM">
+    </ActionBar>
     <FlexboxLayout width="*" height="*" backgroundColor="White">
       <FlexboxLayout flexDirection="column">
           <FlexboxLayout flexDirection="column">
