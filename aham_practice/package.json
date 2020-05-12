@@ -15,12 +15,13 @@
     }
   },
   "dependencies": {
+    "@nativescript/theme": "^2.2.1",
+    "@sendgrid/mail": "^7.1.0",
     "@vue/devtools": "^5.3.3",
     "nativescript-socketio": "^3.3.1",
-    "nativescript-vue-devtools": "^1.4.0",
     "nativescript-toasty": "^3.0.0-alpha.2",
-    "@nativescript/theme": "^2.2.1",
     "nativescript-vue": "^2.6.1",
+    "nativescript-vue-devtools": "^1.4.0",
     "tns-core-modules": "^6.5.1"
   },
   "devDependencies": {

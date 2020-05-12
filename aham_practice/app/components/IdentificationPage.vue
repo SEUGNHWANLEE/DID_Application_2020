@@ -11,7 +11,7 @@
     <StackLayout>
       <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
         <TabViewItem title="Personal ID">
-          <Button text="ID : 개인정보 하라고yo" @tap="goToEmail()" />
+          <Button text="ID : 개인정보 등록" @tap="goToEmail()" />
         </TabViewItem>
         <TabViewItem title="여권정보">
           <Button text="여권 : 개인정보 입력" @tap="goToEmail()" />

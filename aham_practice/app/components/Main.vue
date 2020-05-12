@@ -3,7 +3,7 @@
     <ActionBar title="AHAM">
     </ActionBar>
     <FlexboxLayout flexDirection="column">
-      <Label text="AHAM LOGO will be here" />
+      <Label text="AHAM" />
 
       <FlexboxLayout ref="main_content" backgroundColor="White" height="400" width="*">
         <DockLayout stretchLastChild="true" width="*">
@@ -12,9 +12,9 @@
 
           <StackLayout width="300">
             <template v-if="count === 0">
-              <FlexboxLayout flexDirection="column">
+              <FlexboxLayout flexDirection="column" width="*">
                 <Label name="num" :text="items[0].no" />
-                <Label name="desc" :text="items[0].desc" />
+                <TextView editable="false" name="desc" :text="items[0].desc" />
               </FlexboxLayout>
             </template>
             <template v-else-if="count === 1">
@@ -37,7 +37,7 @@
       </FlexboxLayout>
 
       <FlexboxLayout flexDirection="column">
-        <Button text="시작하기ㅋ" @tap="$goto('password',navOptions)"></Button>
+        <Button text="시작하기" @tap="$goto('password',navOptions)"></Button>
         <FlexboxLayout>
           <Button text="약관 및 동의" @tap="getInfo"></Button>
           <Button text="복구하기" @tap="getRestore"></Button>
@@ -56,7 +56,7 @@ export default {
       items: [
         {
           no: 1,
-          desc: "this is the first page"
+          desc: "\t환영합니다.\n\n 자기주권 신원인증 앱\n\n\tAHAM입니다"
         },
         {
           no: 2,
