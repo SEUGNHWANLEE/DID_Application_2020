@@ -3,7 +3,7 @@
     <FlexboxLayout width="*" height="*" backgroundColor="White">
       <FlexboxLayout flexDirection="column">
         <FlexboxLayout flexDirection="column">
-          <TextField id="sendEmail" hint="이메일 주소 입력" height="50"></TextField>
+          <TextField id="sendEmail" hint="이메일 주소 입력" height="50" v-model="address"></TextField>
           <Button text="보내기" @tap="send"></Button>
         </FlexboxLayout>
         <FlexboxLayout flexDirection="column">
@@ -21,12 +21,12 @@ import Mail from "@/mail/index.js";
 export default {
   data() {
     return {
-      
+      address :"",
     };
   },
   methods: {
     send() {
-      Mail.sendEmail();
+      Mail.sendEmail(this.address);
     }
   },
   computed: {
