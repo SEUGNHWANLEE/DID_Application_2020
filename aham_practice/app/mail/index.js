@@ -22,6 +22,7 @@ export default {
         sgMail.setApiKey('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');
 
         msg.to = address;
+        msg.dynamicTemplateData.pin_code = pinCode.toString();
 
         sgMail.send(msg)
             .then(response => {
