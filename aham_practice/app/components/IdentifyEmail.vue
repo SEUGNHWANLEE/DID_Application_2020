@@ -3,11 +3,11 @@
     <FlexboxLayout width="*" height="*" backgroundColor="White">
       <FlexboxLayout flexDirection="column">
         <FlexboxLayout flexDirection="column">
-          <TextField id="sendEmail" hint="이메일 주소 입력" height="50" v-model="address"></TextField>
+          <TextField id="sendEmail" hint="이메일 주소 입력" v-model="address"></TextField>
           <Button text="보내기" @tap="send"></Button>
         </FlexboxLayout>
         <FlexboxLayout flexDirection="column">
-          <TextField id="confirmMail" hint="인증 번호" height="50"></TextField>
+          <TextField id="confirmMail" hint="인증 번호"></TextField>
           <Button text="인증 확인" @tap="$goto('main',navOptions)"></Button>
         </FlexboxLayout>
       </FlexboxLayout>
@@ -21,12 +21,14 @@ import Mail from "@/mail/index.js";
 export default {
   data() {
     return {
-      address :"",
+      address : "",
+      pinCode : 1234, //random화 해야함
     };
   },
   methods: {
     send() {
-      Mail.sendEmail(this.address);
+      console.log(this.address);
+      Mail.sendEmail(this.address, this.pinCode);
     }
   },
   computed: {
@@ -45,10 +47,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 FlexboxLayout {
   justify-content: center;
   align-items: center;
+}
+TextField {
+  text-align: center;
+  width:200;
+  height: 40;
+  size: 15;
 }
 #sendMail {
   font-size: 15;

@@ -8,3 +8,4 @@ node_modules
 hooks
 platforms
 sendgrid.env
+.env
