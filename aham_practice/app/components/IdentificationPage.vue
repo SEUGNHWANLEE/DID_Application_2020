@@ -40,15 +40,13 @@ export default {
       });
     },
     goToPassport() {
-      confirm(
-        "여권정보를 입력합니다 !".then(response => {
+      confirm("여권정보를 입력합니다 !").then(response => {
           if (response == true) {
             console.log("user pressed : " + response);
-            this.$$navigateTo(IdentifyPassport);
+            this.$navigateTo(IdentifyPassport);
           } else console.log(error);
-        })
-      );
-    }
+        });
+      }
   },
   computed: {
     navOptions() {
