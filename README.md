@@ -4,8 +4,7 @@
 
 기업 : AHAM
 
-@@nativescript-vue install
-# NativeScript-Vue Application
+# NativeScript-Vue Application install
 
 > A native application built with NativeScript-Vue
 
@@ -27,6 +26,6 @@ tns debug <platform>
 # Build for production
 tns build <platform> --env.production
 
-개발환경 :
+## 개발환경 :
   - ios : xcode simulator
   - android : minSDK 26, targetSDK 29 
