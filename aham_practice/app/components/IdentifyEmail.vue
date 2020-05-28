@@ -17,6 +17,7 @@
 
 <script>
 import Mail from "@/mail/index.js";
+import ServicePage from '@/components/ServicePage.vue';
 
 export default {
   data() {
@@ -45,6 +46,7 @@ export default {
         .then(response => {
           if(response == true) {
             console.log("goto activity!");
+            this.$navigateTo(ServicePage);
           } else {
             console.log(error);
           }
