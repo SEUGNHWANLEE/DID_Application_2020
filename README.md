@@ -10,6 +10,7 @@
 
 ## Usage
 
+# 프로젝트 경로로 이동 후
 ``` bash
 # Install dependencies
 npm install
