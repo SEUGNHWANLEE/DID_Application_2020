@@ -3,4 +3,18 @@
     <string name="start">시작하기</string>
     <string name="policy">약관 및 동의</string>
     <string name="restore">복구하기</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello">this is the information of imymemine welcome to our app have a highly protective system</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="input_pincode">PIN 번호4자리를 입력해주세요</string>
+    <string name="personal_id">PERSONAL ID</string>
 </resources>
