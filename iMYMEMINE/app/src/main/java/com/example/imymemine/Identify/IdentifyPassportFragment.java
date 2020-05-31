@@ -1,6 +1,7 @@
 package com.example.imymemine.Identify;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.example.imymemine.CameraActivity;
+import com.example.imymemine.EmailActivity;
 import com.example.imymemine.R;
 
 public class IdentifyPassportFragment extends Fragment {
@@ -35,6 +38,8 @@ public class IdentifyPassportFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();     //닫기
+                        Intent intent = new Intent(getActivity(), CameraActivity.class);
+                        startActivity(intent);
                         // Event
                     }
                 });
