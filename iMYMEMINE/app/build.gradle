@@ -36,4 +36,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //tab layout
     implementation 'com.google.android.material:material:1.1.0'
+    //sendgrid
+    implementation 'com.sendgrid:sendgrid-java:4.0.1'
 }

@@ -15,8 +15,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.imymemine.EmailActivity;
-import com.example.imymemine.IdentifyActivity;
-import com.example.imymemine.LoginActivity;
 import com.example.imymemine.R;
 
 public class IdentifyEmailFragment extends Fragment {
