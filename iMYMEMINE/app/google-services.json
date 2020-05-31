@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "2100543452",
+    "firebase_url": "https://aham-3cfc3.firebaseio.com",
+    "project_id": "aham-3cfc3",
+    "storage_bucket": "aham-3cfc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2100543452:android:b7f6f79f6274953c511919",
+        "android_client_info": {
+          "package_name": "com.example.imymemine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2100543452-3cp4ctcccujqm0nablus0nv17u2f9d3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdSwk7g4KUsgv0Efc6tT100DoyJZdGqXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2100543452-3cp4ctcccujqm0nablus0nv17u2f9d3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

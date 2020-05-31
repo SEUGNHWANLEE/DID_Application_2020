@@ -3,7 +3,6 @@ package com.example.imymemine.Identify;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.imymemine.EmailActivity;
+import com.example.imymemine.SignUpActivity;
 import com.example.imymemine.R;
 
-public class IdentifyEmailFragment extends Fragment {
+public class IdentifyPersonalFragment extends Fragment {
 
     private TextView personalText;
 
@@ -41,7 +41,7 @@ public class IdentifyEmailFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();     //닫기
-                        Intent intent = new Intent(getActivity(), EmailActivity.class);
+                        Intent intent = new Intent(getActivity(), SignUpActivity.class);
                         startActivity(intent);
                         // Event
                     }
