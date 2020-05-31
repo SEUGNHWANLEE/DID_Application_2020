@@ -37,6 +37,7 @@ public class IdentifyStudentFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();     //닫기
                         // Event
+
                     }
                 });
                 ad.setNegativeButton("아니요", new DialogInterface.OnClickListener() {
