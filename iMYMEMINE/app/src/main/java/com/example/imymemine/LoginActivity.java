@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.imymemine.Identify.IdentifyActivity;
+
 public class LoginActivity extends AppCompatActivity {
 
     //@param

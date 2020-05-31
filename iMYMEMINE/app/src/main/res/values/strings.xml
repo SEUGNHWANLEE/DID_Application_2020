@@ -17,4 +17,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="input_pincode">PIN 번호4자리를 입력해주세요</string>
     <string name="personal_id">PERSONAL ID</string>
+    <string name="passport">PASSPORT</string>
+    <string name="student_id">STUDENT ID</string>
 </resources>

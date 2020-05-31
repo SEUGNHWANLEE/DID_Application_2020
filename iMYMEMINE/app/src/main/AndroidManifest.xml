@@ -13,7 +13,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login2"/>
-        <activity android:name=".IdentifyActivity"
+        <activity android:name=".Identify.IdentifyActivity"
             android:label="Identify"/>
         <activity android:name=".MainActivity">
             <intent-filter>

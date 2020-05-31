@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_personalID"
+        android:title="@string/personal_id" />
+    <item
+        android:id="@+id/item_passport"
+        android:title="@string/passport" />
+    <item
+        android:id="@+id/item_studentID"
+        android:title="@string/student_id" />
+</menu>
