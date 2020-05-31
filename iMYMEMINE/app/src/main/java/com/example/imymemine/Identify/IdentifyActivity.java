@@ -2,14 +2,12 @@ package com.example.imymemine.Identify;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
 
 import com.example.imymemine.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,7 +33,7 @@ public class IdentifyActivity extends AppCompatActivity {
                     case R.id.item_personalID:
                         FragmentManager fragmentManager = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content, new IdentifyEmailFragment());
+                        fragmentTransaction.replace(R.id.main_content, new IdentifyPersonalFragment());
                         fragmentTransaction.commit();
                         return true;
                     case R.id.item_passport:

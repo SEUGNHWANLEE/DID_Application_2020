@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -12,6 +13,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    //More than one file was found with OS independent path 'META-INF/DEPENDENCIES'
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
     }
 
     buildTypes {
@@ -38,4 +43,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     //sendgrid
     implementation 'com.sendgrid:sendgrid-java:4.0.1'
+    //fire-base
+    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+
 }

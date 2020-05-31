@@ -14,7 +14,7 @@
             android:layout_above="@id/editMail"
             android:layout_marginBottom="100dp"
             android:textSize="25dp"
-            android:text="메일 인증"/>
+            android:text="REGISTER"/>
 
         <EditText
             android:id="@+id/editMail"
@@ -25,36 +25,24 @@
             android:textSize="14dp"
             android:hint="메일 주소"
             android:textAlignment="center" />
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/editMail"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/sendMail"
-            android:text="메일 보내기"
-            />
         <EditText
             android:layout_width="160dp"
             android:id="@+id/verifyNumber"
             android:textAlignment="center"
-            android:hint="인증번호"
-            android:layout_below="@+id/sendMail"
+            android:hint="비밀번호"
             android:layout_marginTop="10dp"
+            android:layout_below="@id/editMail"
             android:textSize="14dp"
             android:layout_centerHorizontal="true"
             android:layout_height="40dp"/>
-
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/verify"
-            android:layout_below="@id/sendMail"
-            android:layout_toRightOf="@id/verifyNumber"
-            android:layout_marginLeft="10dp"
-            android:text="인증확인"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/signup_submit"
+            android:layout_below="@id/verifyNumber"
+            android:text="가입하기"
+            android:background="@drawable/layout_bg"
             />
-
-
     </RelativeLayout>
 </RelativeLayout>
