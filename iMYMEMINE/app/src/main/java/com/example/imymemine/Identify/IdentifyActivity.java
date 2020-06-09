@@ -25,7 +25,6 @@ public class IdentifyActivity extends AppCompatActivity {
 
         mFrameLayout = (FrameLayout) findViewById(R.id.main_content);
         mBottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigationbar);
-        mBottomNavigation.setSelectedItemId(R.id.item_personalID);
         mBottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -52,6 +51,7 @@ public class IdentifyActivity extends AppCompatActivity {
                 return false;
             }
         });
+        mBottomNavigation.setSelectedItemId(R.id.item_personalID);
 
 //        FragmentManager fragmentManager = getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

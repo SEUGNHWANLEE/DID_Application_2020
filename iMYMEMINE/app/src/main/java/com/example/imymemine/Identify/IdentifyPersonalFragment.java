@@ -13,7 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import com.example.imymemine.EmailActivity;
+
+import com.example.imymemine.CameraActivity;
 import com.example.imymemine.SignUpActivity;
 import com.example.imymemine.R;
 
@@ -33,15 +34,15 @@ public class IdentifyPersonalFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
-                ad.setTitle("메일인증");       // 제목 설정
-                ad.setMessage("메일을 등록하시겠습니까?");   // 내용 설정
+                ad.setTitle("신분증 등록");       // 제목 설정
+                ad.setMessage("신분증을 등록하시겠습니까?");   // 내용 설정
 
                 // 확인 버튼 설정
                 ad.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();     //닫기
-                        Intent intent = new Intent(getActivity(), SignUpActivity.class);
+                        Intent intent = new Intent(getActivity(), CameraActivity.class);
                         startActivity(intent);
                         // Event
                     }
