@@ -20,4 +20,6 @@
     <string name="passport">PASSPORT</string>
     <string name="student_id">STUDENT ID</string>
     <string name="input_password">비밀번호를 입력해주세요</string>
+    <string name="identify">인증</string>
+    <string name="attendance">출석</string>
 </resources>

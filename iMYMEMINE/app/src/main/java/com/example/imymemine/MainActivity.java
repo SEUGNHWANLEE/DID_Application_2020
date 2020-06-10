@@ -44,5 +44,18 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.addItem(new IntroSecondFragment());
         mViewpager.setAdapter(mAdapter);
     }
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
 
 }

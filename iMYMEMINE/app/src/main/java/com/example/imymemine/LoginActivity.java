@@ -73,4 +73,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }
