@@ -15,12 +15,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
     private Button mButton;
-    private EditText mEmailAddress;
-    private EditText mPassword;
+    private EditText mEmailAddress, mPassword, mName;
+
     FirebaseAuth mFirebaseAuth;
 
     private static String TAG = "EmailActivity";
@@ -30,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         mEmailAddress = (EditText) findViewById(R.id.editMail);
+        mName = (EditText) findViewById(R.id.editName);
         mPassword = (EditText) findViewById(R.id.verifyNumber);
         mButton = (Button) findViewById(R.id.signup_submit);
 
@@ -48,6 +50,12 @@ public class SignUpActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
+                                    FirebaseDatabase.getInstance().getReference()
+                                            .child("users")
+                                            .child(mFirebaseAuth.getCurrentUser().getUid())
+                                            .child("Name")
+                                            .setValue(mName.getText().toString());
+                                    Toast.makeText(getApplicationContext(), "가입이 완료되었습니다!",Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                     startActivity(intent);
                                     finish();
