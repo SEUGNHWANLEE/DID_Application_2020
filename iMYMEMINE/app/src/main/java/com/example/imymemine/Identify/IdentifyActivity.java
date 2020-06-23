@@ -1,8 +1,10 @@
 package com.example.imymemine.Identify;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.drm.DrmStore;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -12,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
@@ -122,4 +125,24 @@ public class IdentifyActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    public boolean checkPermissionsArray(String[] permissions) {
+        for (int i = 0; i < permissions.length; i++) {
+            String check = permissions[i];
+            if (checkPermissions(check)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkPermissions(String permission) {
+        int permissionRequest = ActivityCompat.checkSelfPermission(IdentifyActivity.this, permission);
+        if (permissionRequest != PackageManager.PERMISSION_GRANTED) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+
 }
