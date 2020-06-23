@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.drm.DrmStore;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,6 +34,7 @@ public class IdentifyActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+    private static final int CAMERA_REQUEST_CODE = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,6 +139,8 @@ public class IdentifyActivity extends AppCompatActivity {
         return false;
     }
 
+
+
     public boolean checkPermissions(String permission) {
         int permissionRequest = ActivityCompat.checkSelfPermission(IdentifyActivity.this, permission);
         if (permissionRequest != PackageManager.PERMISSION_GRANTED) {
@@ -145,6 +149,18 @@ public class IdentifyActivity extends AppCompatActivity {
             return true;
         }
 
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        System.out.println(grantResults[0]+"무엇 ?");
+        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+//            //resume tasks needing this permission
+//            Intent intent = new Intent(this,IdentifyActivity.class);
+//            startActivity(intent);
+            Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST_CODE);
+        }
     }
 
 }
