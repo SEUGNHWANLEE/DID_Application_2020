@@ -60,9 +60,11 @@ public class IdentifyActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.item_Identify:
                         Toast.makeText(getApplicationContext(),"이미 인증화면입니다", Toast.LENGTH_LONG).show();
+                        break;
                     case R.id.item_Attendance:
                         Intent intent = new Intent(getApplicationContext(), AttendanceActivity.class);
                         startActivity(intent);
+                        break;
                 }
 
                 return false;

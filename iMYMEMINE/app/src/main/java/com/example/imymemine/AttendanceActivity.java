@@ -61,7 +61,9 @@ public class AttendanceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "출석을 시작합니다", Toast.LENGTH_LONG).show();
 
-                final String[] name = {""};
+                SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd");
+                Date time = new Date();
+                final String time1 = format1.format(time);
                 FirebaseDatabase.getInstance().getReference()
                         .child("users")
                         .child(mAuth.getCurrentUser().getUid())
@@ -69,7 +71,18 @@ public class AttendanceActivity extends AppCompatActivity {
                         .addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                name[0] = snapshot.getValue().toString();
+                               final String name = snapshot.getValue().toString();
+                                new Thread() {
+                                    public void run() {
+                                        postWithApi("IMYMEMINE-tesing", name, "IMYMEMINE-0", time1, "SUCCESS");
+                                        //getWithApi();
+                                        Bundle bun = new Bundle();
+                                        bun.putString("result", "good");
+                                        Message msg = handler.obtainMessage();
+                                        msg.setData(bun);
+                                        handler.sendMessage(msg);
+                                    }
+                                }.start();
                             }
 
                             @Override
@@ -77,21 +90,7 @@ public class AttendanceActivity extends AppCompatActivity {
 
                             }
                         });
-                SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd");
-                Date time = new Date();
-                final String time1 = format1.format(time);
 
-                new Thread() {
-                    public void run() {
-                        postWithApi("IMYMEMINE", name[0], "IMYMEMINE-0", time1, "SUCCESS");
-                        //getWithApi();
-                        Bundle bun = new Bundle();
-                        bun.putString("result", "good");
-                        Message msg = handler.obtainMessage();
-                        msg.setData(bun);
-                        handler.sendMessage(msg);
-                    }
-                }.start();
             }
         });
 
