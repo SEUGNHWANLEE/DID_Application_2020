@@ -4,6 +4,43 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/attendance_btn"
+
+        android:padding="5dp"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/attendance_name"
+
+        android:textColor="#3E3E3E"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        android:layout_margin="5dp"
+
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/attendance_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#3e3e3e"
+        android:text="으로 출석하시겠습니까?"
+        android:gravity="center"
+
+        android:layout_margin="5dp"
+        />
+    </LinearLayout>
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"

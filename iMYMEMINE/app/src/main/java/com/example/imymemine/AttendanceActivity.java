@@ -9,6 +9,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,14 +47,33 @@ public class AttendanceActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     //widget
     private Button mButton;
+    private TextView mName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
 
+        mName = (TextView) findViewById(R.id.attendance_name);
+
         //firebase get current user
         setupFirebaseAuth();
+
+        FirebaseDatabase.getInstance().getReference()
+                .child("users")
+                .child(mAuth.getCurrentUser().getUid())
+                .child("Name")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                         mName.setText(snapshot.getValue().toString());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
         mButton = (Button) findViewById(R.id.attendance_btn);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -64,33 +84,17 @@ public class AttendanceActivity extends AppCompatActivity {
                 SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd");
                 Date time = new Date();
                 final String time1 = format1.format(time);
-                FirebaseDatabase.getInstance().getReference()
-                        .child("users")
-                        .child(mAuth.getCurrentUser().getUid())
-                        .child("Name")
-                        .addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                               final String name = snapshot.getValue().toString();
-                                new Thread() {
-                                    public void run() {
-                                        postWithApi("IMYMEMINE-tesing", name, "IMYMEMINE-0", time1, "SUCCESS");
-                                        //getWithApi();
-                                        Bundle bun = new Bundle();
-                                        bun.putString("result", "good");
-                                        Message msg = handler.obtainMessage();
-                                        msg.setData(bun);
-                                        handler.sendMessage(msg);
-                                    }
-                                }.start();
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
+                new Thread() {
+                    public void run() {
+                        postWithApi("IMYMEMINE-tesing", mName.getText().toString(), "IMYMEMINE-0", time1, "SUCCESS");
+                        //getWithApi();
+                        Bundle bun = new Bundle();
+                        bun.putString("result", "good");
+                        Message msg = handler.obtainMessage();
+                        msg.setData(bun);
+                        handler.sendMessage(msg);
+                    }
+                }.start();
             }
         });
 

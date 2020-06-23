@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/item_personalID"
+        android:icon="@null"
         android:title="@string/personal_id" />
     <item
         android:id="@+id/item_passport"
+        android:icon="@null"
         android:title="@string/passport" />
     <item
         android:id="@+id/item_studentID"
+        android:icon="@null"
         android:title="@string/student_id" />
 </menu>

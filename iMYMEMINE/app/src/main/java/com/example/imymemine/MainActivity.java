@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(mViewpager, true);
         mAdapter.addItem(new IntroFirstFragment());
-        mAdapter.addItem(new IntroSecondFragment());
+        //mAdapter.addItem(new IntroSecondFragment());
         mViewpager.setAdapter(mAdapter);
     }
     @Override

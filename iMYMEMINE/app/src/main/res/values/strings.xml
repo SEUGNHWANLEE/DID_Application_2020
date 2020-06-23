@@ -5,20 +5,20 @@
     <string name="restore">복구하기</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello">this is the information of imymemine welcome to our app have a highly protective system</string>
+    <string name="hello">불법프로그램 근절 자기주권 신원인증 앱</string>
     <string name="title_activity_login2">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="welcome">환영합니다 </string>
+    <string name="invalid_username">사용할 수 없는 이름입니다 </string>
+    <string name="invalid_password">비밀번호는 6자리이상 설정해주세요 </string>
+    <string name="login_failed">로그인 실패</string>
     <string name="input_pincode">로그인할 이메일을 입력주세요</string>
-    <string name="personal_id">PERSONAL ID</string>
-    <string name="passport">PASSPORT</string>
-    <string name="student_id">STUDENT ID</string>
+    <string name="personal_id">신분증</string>
+    <string name="passport">여권</string>
+    <string name="student_id">학생증</string>
     <string name="input_password">비밀번호를 입력해주세요</string>
     <string name="identify">인증</string>
     <string name="attendance">출석</string>
